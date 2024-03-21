@@ -1,3 +1,5 @@
+// Dado uma string, realize uma compressão dos dados contando o número de 
+caracteres repetidos.
 <?php
 function compressao($string) {
     $compressed = '';
