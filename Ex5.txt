@@ -1,3 +1,4 @@
+// Escreva um programa que gere a série de Fibonacci até um dado número n
 <?php
 function fibonacciSerie($n) {
     // Define os dois primeiros números da sequência de Fibonacci
