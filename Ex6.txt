@@ -1,4 +1,6 @@
- <?php
+// Crie uma função que receba um número indeterminado de inteiros e retorne a soma de todos.
+
+<?php
 function soma(...$nums) {
     return array_sum($nums);
 }
