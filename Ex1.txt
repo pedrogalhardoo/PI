@@ -1,3 +1,4 @@
+// Defina dois números inteiros a e b. Em seguida, imprima uma lista de todos os  números inteiros entre eles.
 <?php
 function printIntegersBetween($a, $b) {
     if ($a >= $b) {
