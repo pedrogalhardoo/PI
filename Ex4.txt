@@ -1,0 +1,35 @@
+<?php
+function compressao($string) {
+    $compressed = '';
+    $count = 1;
+
+    // Adiciona o primeiro caractere da string à versão comprimida
+    $compressed .= $string[0];
+
+    // Percorre a string começando do segundo caractere
+    for ($i = 1; $i < strlen($string); $i++) {
+        // Se o caractere atual for igual ao anterior, incrementa o contador
+        if ($string[$i] == $string[$i - 1]) {
+            $count++;
+        } else {
+            // Se o contador for maior que 1, adiciona à string comprimida
+            if ($count > 1) {
+                $compressed .= $count;
+            }
+            // Começa a contar o próximo caractere
+            $count = 1;
+            $compressed .= $string[$i];
+        }
+    }
+
+    // Adiciona o último contador se for maior que 1
+    if ($count > 1) {
+        $compressed .= $count;
+    }
+
+    return $compressed;
+}
+
+// Teste com o exemplo fornecido
+echo compressao("qqwwweeeerrrrtyy"); // Saída: q2w3e4r5ty2
+?>

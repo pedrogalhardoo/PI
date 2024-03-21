@@ -1,0 +1,16 @@
+ <?php
+function divide_printa($string, $n) {
+    if (strlen($string) % $n != 0) {
+        echo "A string não pode ser dividida em partes iguais de tamanho $n.";
+        return;
+    }
+
+    $partSize = strlen($string) / $n;
+    for ($i = 0; $i < strlen($string); $i += $partSize) {
+        echo substr($string, $i, $partSize) . "\n";
+    }
+}
+
+divide_printa("a123b123", 2);
+divide_printa("abc", 3);
+?>

@@ -1,0 +1,21 @@
+<?php
+
+function tabela($titulo, $colunas, $linhas) {
+    echo "<table border='1'>"; // Início da tabela e borda opcional para visualização
+    echo "<tr><th colspan='$colunas'>$titulo</th></tr>"; // Título da tabela com colspan para mesclar células
+
+    for ($linha = 1; $linha <= $linhas; $linha++) {
+        echo "<tr>"; // Início de uma linha da tabela
+        for ($coluna = 1; $coluna <= $colunas; $coluna++) {
+            echo "<td>L{$linha}C{$coluna}</td>"; // Células da tabela com o texto desejado
+        }
+        echo "</tr>"; // Fim da linha da tabela
+    }
+
+    echo "</table>"; // Fim da tabela
+}
+
+// Exemplo de uso da função
+tabela("Teste", 4, 2); // Cria uma tabela com o título "Teste", 4 colunas e 2 linhas
+
+?>

@@ -1,0 +1,37 @@
+<?php
+
+// Função para imprimir o padrão em forma de pirâmide
+function printPiramide($lines) {
+    $number = 1;
+    for ($row = 1; $row <= $lines; $row++) {
+        // Imprime os espaços iniciais para formar a pirâmide
+        for ($space = 1; $space <= $lines - $row; $space++) {
+            echo "&nbsp;&nbsp;";
+        }
+        // Imprime os números da linha
+        for ($col = 1; $col <= $row; $col++) {
+            echo "$number ";
+            $number++;
+        }
+        echo "<br/>";
+    }
+}
+
+// Função para imprimir o padrão em forma de bloco
+function printBloco($lines) {
+    $number = 1;
+    for ($row = 1; $row <= $lines; $row++) {
+        // Imprime os números da linha sem espaços adicionais
+        for ($col = 1; $col <= $row; $col++) {
+            echo "$number ";
+            $number++;
+        }
+        echo "<br/>";
+    }
+}
+
+// Chamada de funções para imprimir os padrões
+printPiramide(4);
+echo "<br/>"; // Adiciona uma linha em branco entre os padrões
+printBloco(4);
+?>

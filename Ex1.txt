@@ -1,0 +1,22 @@
+<?php
+function printIntegersBetween($a, $b) {
+    if ($a >= $b) {
+        $temp = $a;
+        $a = $b + 1;
+        $b = $temp - 1;
+    } else {
+        $a++;
+        $b--;
+    }
+
+    $integersBetween = [];
+    for ($i = $a; $i <= $b; $i++) {
+        $integersBetween[] = $i;
+    }
+
+    return $integersBetween;
+}
+
+print_r(printIntegersBetween(-5, 6)); 
+print_r(printIntegersBetween(1, 2));   
+?>

@@ -1,0 +1,9 @@
+ <?php
+function soma(...$nums) {
+    return array_sum($nums);
+}
+
+// Testes
+echo soma(1, 2) . "\n";    // Saída: 3
+echo soma(1, 2, 8) . "\n"; // Saída: 11
+?>
