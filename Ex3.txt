@@ -1,4 +1,5 @@
- <?php
+// Dada uma string e um inteiro. Caso o tamanho da string seja divisível por n, então a divida em n partes.
+<?php
 function divide_printa($string, $n) {
     if (strlen($string) % $n != 0) {
         echo "A string não pode ser dividida em partes iguais de tamanho $n.";
