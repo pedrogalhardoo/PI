@@ -1,3 +1,4 @@
+// Usando a estrutura de repetição for, crie os seguintes padrões. 
 <?php
 
 // Função para imprimir o padrão em forma de pirâmide
